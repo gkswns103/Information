@@ -19,15 +19,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnReq = (Button)findViewById(R.id.btnRequest);
+        Button btnRequest = (Button)findViewById(R.id.btnRequest);
         Button btnEnd = (Button)findViewById(R.id.btnEnd);
-        EditText editText = findViewById(R.id.editTextID);
+        EditText editTextID = findViewById(R.id.editTextID);
         tVResultLabel = (TextView)findViewById(R.id.tVResultLabel);
         tVResult = (TextView)findViewById(R.id.tVResult);
-        btnReq.setOnClickListener(new View.OnClickListener() {
+        btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str = editText.getText().toString();
+                str = editTextID.getText().toString();
                 Intent intent = new Intent(getApplicationContext(),InformationActivity.class);
                 intent.putExtra("id",str);
                 startActivityForResult(intent,REQUEST_INFO);
@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 finish();
             }
-        }));
+        }
+        ));
     }
 
     @Override
