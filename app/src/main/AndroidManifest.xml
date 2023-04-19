@@ -22,8 +22,7 @@
         </activity>
         <activity
             android:name=".InformationActivity"
-            android:exported="true" />
-
+            android:label="정보 입력"/>
     </application>
 
 </manifest>

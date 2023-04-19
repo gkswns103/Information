@@ -49,6 +49,7 @@ public class InformationActivity extends AppCompatActivity {
 
                 it.putExtra("license",strLicense);
                 setResult(RESULT_OK,it);
+                finish();
             }
         });
     }

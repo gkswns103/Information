@@ -46,5 +46,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if ((requestCode == 1) && (resultCode == RESULT_OK)) {
+            tVResultLabel.setText("전송\n정보\n출력");
+            str = "아이디: " + str;
+            str = str + "\n이름: " + data.getStringExtra("name");
+            str = str + "\n나이: " + data.getStringExtra("age");
+            str = str + "\n성별: " + data.getStringExtra("sex");
+            str = str + "\n자격증: " + data.getStringExtra("license");
+            tVResult.setText(str);
+
+        }
+
+
     }
 }
